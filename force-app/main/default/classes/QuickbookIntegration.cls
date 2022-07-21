@@ -3,19 +3,9 @@ public with sharing class QuickbookIntegration {
 
     }
     // realmId or companyId: 4620816365230256810
-    public static void getInvoice() {
+    public static void getCustomer() {
         HttpRequest req = new HttpRequest();
-        req.setEndpoint('callout:Quickbooks_Named_Credential/v3/company/4620816365230256810/invoice/39');
-        req.setHeader('Accept','application/json');
-        req.setHeader('Content-Type','application/json');
-        req.setMethod('GET');
-        Http http = new Http();
-        HTTPResponse res = http.send(req);
-        System.debug(res.getBody());
-    }
-    public static void getReceipt() {
-        HttpRequest req = new HttpRequest();
-        req.setEndpoint('callout:Quickbooks_Named_Credential/v3/company/4620816365230256810/invoice/39');
+        req.setEndpoint('callout:Quickbooks_Named_Credential/v3/company/4620816365230256810/customer/39');
         req.setHeader('Accept','application/json');
         req.setHeader('Content-Type','application/json');
         req.setMethod('GET');
